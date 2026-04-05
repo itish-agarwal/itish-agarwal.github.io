@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   Fun / Extra Section — Hobby cards + tap game + modal
+   Fun / Extra Section — Hobby cards + modal
    ═══════════════════════════════════════════════════════════ */
 
 .fun { background: var(--bg-alt); }
@@ -49,6 +49,7 @@
   display: block;
   margin-top: var(--sp-2);
   font-size: .75rem;
+  pointer-events: none;
   color: var(--purple-400);
   opacity: 0;
   transition: opacity var(--transition);

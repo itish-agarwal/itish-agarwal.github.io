@@ -9,7 +9,6 @@ document.documentElement.classList.add('js-ready');
 import { handleNavScroll, initMobileMenu, initSmoothScroll } from './navigation.js';
 import { handleBackToTop, initBackToTop, initScrollReveal }  from './scroll.js';
 import { initContactForm }                                   from './contact.js';
-import { initTapGame }                                       from './tapgame.js';
 import { initHobbyModals }                                   from './hobbies.js';
 
 /* ── Set current year in footer ───────────────────────────── */
@@ -31,5 +30,4 @@ initSmoothScroll();
 initBackToTop();
 initScrollReveal();
 initContactForm();
-initTapGame();
 initHobbyModals();

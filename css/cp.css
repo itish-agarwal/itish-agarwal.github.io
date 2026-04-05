@@ -2,7 +2,7 @@
    Competitive Programming Section
    ═══════════════════════════════════════════════════════════ */
 
-.cp { background: var(--bg-alt); }
+.cp { background: var(--bg); }
 
 .cp-grid {
   display: grid;
