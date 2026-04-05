@@ -1,0 +1,64 @@
+/* ═══════════════════════════════════════════════════════════
+   Fun / Extra Section — Hobby cards + tap game
+   ═══════════════════════════════════════════════════════════ */
+
+.fun { background: var(--bg-alt); }
+
+.fun-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-10);
+}
+
+.fun-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  text-align: center;
+  border: 1px solid var(--gray-200);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.fun-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--shadow-lg);
+}
+.fun-emoji {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+.fun-card h3 {
+  font-family: var(--font-heading);
+  margin-bottom: var(--sp-2);
+  color: var(--gray-800);
+}
+.fun-card p {
+  color: var(--text-muted);
+  font-size: .9rem;
+}
+
+/* Tap game */
+.fun-interactive {
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  border: 1px solid var(--gray-200);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.fun-interactive p { color: var(--text-muted); margin-bottom: var(--sp-4); }
+
+.tap-btn {
+  font-size: 1.1rem;
+  padding: .9rem 2.4rem;
+  min-width: 200px;
+}
+.tap-result {
+  margin-top: var(--sp-4);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--accent);
+  min-height: 1.5em;
+}

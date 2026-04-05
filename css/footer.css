@@ -1,0 +1,59 @@
+/* ═══════════════════════════════════════════════════════════
+   Footer + Back-to-top button
+   ═══════════════════════════════════════════════════════════ */
+
+.footer {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  padding: var(--sp-6) 0;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+.footer p { font-size: .88rem; }
+.footer-links { display: flex; gap: var(--sp-4); }
+.footer-links a {
+  color: var(--gray-400);
+  font-size: 1.3rem;
+  transition: color var(--transition), transform var(--transition);
+}
+.footer-links a:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: all var(--transition);
+  box-shadow: 0 4px 16px rgba(124,92,252,.3);
+  z-index: 900;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--purple-600);
+  transform: translateY(-3px);
+}

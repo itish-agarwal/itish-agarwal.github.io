@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════════════
+   CSS Custom Properties (Design Tokens)
+   Central place for all theme variables, colors, typography,
+   spacing, and miscellaneous tokens.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* Purple palette */
+  --purple-50:  #f5f0ff;
+  --purple-100: #ece5ff;
+  --purple-200: #d4c4ff;
+  --purple-300: #b197fc;
+  --purple-400: #9775fa;
+  --purple-500: #7c5cfc;
+  --purple-600: #6741d9;
+  --purple-700: #5f3dc4;
+  --purple-800: #4a2fa0;
+  --purple-900: #3b2580;
+
+  /* Neutrals */
+  --white:     #ffffff;
+  --gray-50:   #fafafe;
+  --gray-100:  #f4f2f9;
+  --gray-200:  #e8e5f0;
+  --gray-300:  #d0cce0;
+  --gray-400:  #a9a3be;
+  --gray-500:  #7c7694;
+  --gray-600:  #5a556e;
+  --gray-700:  #3e3a50;
+  --gray-800:  #2a2738;
+  --gray-900:  #1a1726;
+
+  /* Semantic */
+  --bg:        var(--white);
+  --bg-alt:    var(--purple-50);
+  --text:      var(--gray-800);
+  --text-muted:var(--gray-500);
+  --accent:    var(--purple-500);
+  --accent-light: var(--purple-100);
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing scale (8‑pt grid) */
+  --sp-1: .25rem;  --sp-2: .5rem;  --sp-3: .75rem;
+  --sp-4: 1rem;    --sp-5: 1.5rem; --sp-6: 2rem;
+  --sp-8: 3rem;    --sp-10: 4rem;  --sp-12: 5rem;
+  --sp-16: 7rem;
+
+  /* Misc */
+  --radius:    12px;
+  --radius-lg: 20px;
+  --shadow:    0 4px 24px rgba(124, 92, 252, .08);
+  --shadow-lg: 0 8px 40px rgba(124, 92, 252, .12);
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+}

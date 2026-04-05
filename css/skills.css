@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════════════
+   Skills Section — Skill cards with tag chips
+   ═══════════════════════════════════════════════════════════ */
+
+.skills { background: var(--bg-alt); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--sp-5);
+}
+
+.skill-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid var(--gray-200);
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--purple-200);
+}
+
+.skill-card i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: var(--sp-3);
+  display: block;
+}
+
+.skill-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  margin-bottom: var(--sp-3);
+  color: var(--gray-800);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.skill-tags span {
+  background: var(--purple-50);
+  color: var(--purple-700);
+  font-size: .8rem;
+  font-weight: 500;
+  padding: .3rem .75rem;
+  border-radius: 50px;
+  transition: all var(--transition);
+}
+.skill-tags span:hover {
+  background: var(--accent);
+  color: var(--white);
+}

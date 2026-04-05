@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════════════════════
+   About Section — Bio text + highlight cards
+   ═══════════════════════════════════════════════════════════ */
+
+.about { background: var(--bg); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--sp-10);
+  align-items: start;
+}
+
+.about-text p {
+  margin-bottom: var(--sp-4);
+  font-size: 1.02rem;
+}
+.about-text strong { color: var(--accent); }
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.highlight-card {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.highlight-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.highlight-label {
+  font-size: .88rem;
+  color: var(--text-muted);
+}
