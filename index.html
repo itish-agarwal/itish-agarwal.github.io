@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/cp.css" />
   <link rel="stylesheet" href="css/fun.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="stylesheet" href="css/footer.css" />
@@ -156,31 +157,30 @@
       </p>
 
       <div class="skills-grid">
-        <!-- Each card -->
         <div class="skill-card reveal" style="--delay:.1s">
           <i class="ph ph-code" aria-hidden="true"></i>
           <h3>Languages</h3>
           <div class="skill-tags">
-            <span>Python</span><span>JavaScript</span><span>TypeScript</span>
-            <span>C++</span><span>Go</span><span>SQL</span>
+            <span>Python</span><span>Go (Golang)</span><span>C</span>
+            <span>C++</span><span>Javascript</span><span>Typescript</span>
+            <span>C#</span><span>SQL</span>
           </div>
         </div>
 
         <div class="skill-card reveal" style="--delay:.15s">
-          <i class="ph ph-globe" aria-hidden="true"></i>
-          <h3>Frontend</h3>
+          <i class="ph ph-database" aria-hidden="true"></i>
+          <h3>Backend</h3>
           <div class="skill-tags">
-            <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
-            <span>HTML / CSS</span><span>Redux</span>
+            <span>Node.js</span><span>MongoDB</span><span>MySQL</span>
+            <span>Redis</span>
           </div>
         </div>
 
         <div class="skill-card reveal" style="--delay:.2s">
-          <i class="ph ph-database" aria-hidden="true"></i>
-          <h3>Backend &amp; Data</h3>
+          <i class="ph ph-globe" aria-hidden="true"></i>
+          <h3>Frontend</h3>
           <div class="skill-tags">
-            <span>Node.js</span><span>FastAPI</span><span>PostgreSQL</span>
-            <span>Redis</span><span>MongoDB</span><span>GraphQL</span>
+            <span>React</span><span>HTML / CSS</span><span>Next.js</span>
           </div>
         </div>
 
@@ -189,16 +189,17 @@
           <h3>Cloud &amp; DevOps</h3>
           <div class="skill-tags">
             <span>AWS</span><span>Azure</span><span>Docker</span>
-            <span>Kubernetes</span><span>CI / CD</span><span>Terraform</span>
+            <span>Kubernetes</span><span>CI/CD</span><span>FluxV2</span>
+            <span>Helm</span>
           </div>
         </div>
 
         <div class="skill-card reveal" style="--delay:.3s">
-          <i class="ph ph-brain" aria-hidden="true"></i>
-          <h3>AI / ML</h3>
+          <i class="ph ph-book-open" aria-hidden="true"></i>
+          <h3>CS Core</h3>
           <div class="skill-tags">
-            <span>PyTorch</span><span>TensorFlow</span><span>LLMs</span>
-            <span>NLP</span><span>Computer Vision</span>
+            <span>Algorithms - I &amp; II</span><span>Computer Organization and Architecture</span>
+            <span>Operating Systems</span><span>Computer Networks</span>
           </div>
         </div>
 
@@ -206,8 +207,8 @@
           <i class="ph ph-wrench" aria-hidden="true"></i>
           <h3>Tools &amp; Misc</h3>
           <div class="skill-tags">
-            <span>Git</span><span>Linux</span><span>Figma</span>
-            <span>Jira</span><span>Agile / Scrum</span>
+            <span>Git</span><span>Linux</span><span>Jira</span>
+            <span>Azure DevOps</span>
           </div>
         </div>
       </div>
@@ -313,6 +314,74 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
+       4.5 COMPETITIVE PROGRAMMING SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="cp" class="cp section">
+    <div class="container">
+      <h2 class="section-title reveal">Competitive Programming</h2>
+      <p class="section-subtitle reveal" style="--delay:.05s">
+        Sharpening problem‑solving skills one contest at a time.
+      </p>
+
+      <div class="cp-grid">
+        <div class="cp-card reveal" style="--delay:.1s">
+          <div class="cp-logo">
+            <i class="ph ph-code" aria-hidden="true"></i>
+          </div>
+          <h3>LeetCode</h3>
+          <div class="cp-stats">
+            <div class="cp-stat">
+              <span class="cp-stat-value">1850+</span>
+              <span class="cp-stat-label">Rating</span>
+            </div>
+            <div class="cp-stat">
+              <span class="cp-stat-value">500+</span>
+              <span class="cp-stat-label">Problems</span>
+            </div>
+          </div>
+          <span class="cp-badge">Knight</span>
+        </div>
+
+        <div class="cp-card reveal" style="--delay:.15s">
+          <div class="cp-logo">
+            <i class="ph ph-lightning" aria-hidden="true"></i>
+          </div>
+          <h3>Codeforces</h3>
+          <div class="cp-stats">
+            <div class="cp-stat">
+              <span class="cp-stat-value">1600+</span>
+              <span class="cp-stat-label">Rating</span>
+            </div>
+            <div class="cp-stat">
+              <span class="cp-stat-value">300+</span>
+              <span class="cp-stat-label">Problems</span>
+            </div>
+          </div>
+          <span class="cp-badge">Expert</span>
+        </div>
+
+        <div class="cp-card reveal" style="--delay:.2s">
+          <div class="cp-logo">
+            <i class="ph ph-trophy" aria-hidden="true"></i>
+          </div>
+          <h3>CodeChef</h3>
+          <div class="cp-stats">
+            <div class="cp-stat">
+              <span class="cp-stat-value">1800+</span>
+              <span class="cp-stat-label">Rating</span>
+            </div>
+            <div class="cp-stat">
+              <span class="cp-stat-value">4★</span>
+              <span class="cp-stat-label">Stars</span>
+            </div>
+          </div>
+          <span class="cp-badge">4 Star</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        5. FUN / EXTRA SECTION
   ═══════════════════════════════════════════ -->
   <section id="fun" class="fun section">
@@ -323,25 +392,31 @@
       </p>
 
       <div class="fun-grid">
-        <div class="fun-card reveal" style="--delay:.1s">
-          <span class="fun-emoji" aria-hidden="true">♟️</span>
-          <h3>Chess</h3>
-          <p>1800+ rated on Lichess. I love the elegance of positional play.</p>
+        <div class="fun-card reveal" style="--delay:.1s" data-hobby="football" role="button" tabindex="0">
+          <span class="fun-emoji" aria-hidden="true">⚽</span>
+          <h3>Football</h3>
+          <p>Weekend warrior on the pitch. Nothing beats a good match.</p>
+          <span class="fun-card-hint">Click to learn more</span>
         </div>
-        <div class="fun-card reveal" style="--delay:.15s">
-          <span class="fun-emoji" aria-hidden="true">📚</span>
-          <h3>Reading</h3>
-          <p>Sci‑fi, philosophy, and the occasional dense CS paper at 2 AM.</p>
-        </div>
-        <div class="fun-card reveal" style="--delay:.2s">
+        <div class="fun-card reveal" style="--delay:.15s" data-hobby="music" role="button" tabindex="0">
           <span class="fun-emoji" aria-hidden="true">🎸</span>
           <h3>Music</h3>
-          <p>Amateur guitarist. Currently learning fingerstyle acoustic pieces.</p>
+          <p>Amateur guitarist &amp; avid listener. Music fuels my code.</p>
+          <span class="fun-card-hint">Click to learn more</span>
         </div>
-        <div class="fun-card reveal" style="--delay:.25s">
-          <span class="fun-emoji" aria-hidden="true">🏔️</span>
-          <h3>Travel</h3>
-          <p>Explored 12+ states in India. Next bucket‑list stop: Iceland.</p>
+        <div class="fun-card reveal" style="--delay:.2s" data-hobby="writing" role="button" tabindex="0">
+          <span class="fun-emoji" aria-hidden="true">✍️</span>
+          <h3>Writing</h3>
+          <p>Turning thoughts into words — blogs, journals, and poetry.</p>
+          <span class="fun-card-hint">Click to learn more</span>
+        </div>
+      </div>
+
+      <!-- Hobby Detail Modal -->
+      <div class="hobby-modal-overlay" id="hobbyModalOverlay">
+        <div class="hobby-modal" id="hobbyModal" role="dialog" aria-modal="true">
+          <button class="hobby-modal-close" id="hobbyModalClose" aria-label="Close">&times;</button>
+          <div class="hobby-modal-body" id="hobbyModalBody"></div>
         </div>
       </div>
 

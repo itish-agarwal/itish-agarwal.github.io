@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════════════════
-   Fun / Extra Section — Hobby cards + tap game
+   Fun / Extra Section — Hobby cards + tap game + modal
    ═══════════════════════════════════════════════════════════ */
 
 .fun { background: var(--bg-alt); }
 
 .fun-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-5);
   margin-bottom: var(--sp-10);
 }
@@ -17,11 +17,18 @@
   padding: var(--sp-6);
   text-align: center;
   border: 1px solid var(--gray-200);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  cursor: pointer;
+  position: relative;
 }
 .fun-card:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: var(--shadow-lg);
+  border-color: var(--purple-300);
+}
+.fun-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 .fun-emoji {
   font-size: 2.4rem;
@@ -36,6 +43,89 @@
 .fun-card p {
   color: var(--text-muted);
   font-size: .9rem;
+}
+
+.fun-card-hint {
+  display: block;
+  margin-top: var(--sp-2);
+  font-size: .75rem;
+  color: var(--purple-400);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.fun-card:hover .fun-card-hint {
+  opacity: 1;
+}
+
+/* ── Hobby Modal ── */
+.hobby-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+.hobby-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hobby-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  max-width: 520px;
+  width: 90%;
+  position: relative;
+  transform: translateY(30px) scale(.95);
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  box-shadow: 0 24px 60px rgba(0,0,0,.18);
+}
+.hobby-modal-overlay.active .hobby-modal {
+  transform: translateY(0) scale(1);
+}
+
+.hobby-modal-close {
+  position: absolute;
+  top: var(--sp-3);
+  right: var(--sp-4);
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--gray-500);
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--transition), transform var(--transition);
+}
+.hobby-modal-close:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.hobby-modal-body .modal-emoji {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: var(--sp-3);
+}
+.hobby-modal-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gray-800);
+  margin-bottom: var(--sp-3);
+}
+.hobby-modal-body p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--sp-3);
+}
+.hobby-modal-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* Tap game */

@@ -10,6 +10,7 @@ import { handleNavScroll, initMobileMenu, initSmoothScroll } from './navigation.
 import { handleBackToTop, initBackToTop, initScrollReveal }  from './scroll.js';
 import { initContactForm }                                   from './contact.js';
 import { initTapGame }                                       from './tapgame.js';
+import { initHobbyModals }                                   from './hobbies.js';
 
 /* ── Set current year in footer ───────────────────────────── */
 const yearSpan = document.getElementById('year');
@@ -31,3 +32,4 @@ initBackToTop();
 initScrollReveal();
 initContactForm();
 initTapGame();
+initHobbyModals();

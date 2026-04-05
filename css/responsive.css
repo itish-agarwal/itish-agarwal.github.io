@@ -7,6 +7,7 @@
   .contact-grid  { grid-template-columns: 1fr; }
   .about-highlights { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .highlight-card { flex: 1 1 140px; }
+  .cp-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -40,11 +41,19 @@
   .section { padding: var(--sp-12) 0; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
+  .fun-grid { grid-template-columns: 1fr; }
+
+  /* Hobby modal adjustments */
+  .hobby-modal {
+    padding: var(--sp-6);
+    width: 94%;
+  }
 }
 
 @media (max-width: 480px) {
   .skills-grid   { grid-template-columns: 1fr; }
-  .fun-grid      { grid-template-columns: 1fr 1fr; }
+  .fun-grid      { grid-template-columns: 1fr; }
+  .cp-grid       { grid-template-columns: 1fr; }
   .hero-name     { font-size: 2rem; }
   .highlight-card { flex: 1 1 100%; }
 }
