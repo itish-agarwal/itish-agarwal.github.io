@@ -3,6 +3,9 @@
    — Imports all modules and bootstraps the application
    ═══════════════════════════════════════════════════════════ */
 
+/* ── Mark document as JS-ready (enables reveal animations) ── */
+document.documentElement.classList.add('js-ready');
+
 import { handleNavScroll, initMobileMenu, initSmoothScroll } from './navigation.js';
 import { handleBackToTop, initBackToTop, initScrollReveal }  from './scroll.js';
 import { initContactForm }                                   from './contact.js';
