@@ -101,8 +101,9 @@
 }
 
 .cp-profile-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: .35rem;
   margin-top: var(--sp-3);
   font-size: .85rem;

@@ -522,5 +522,75 @@
 
   <!-- ES6 Module entry point -->
   <script type="module" src="js/main.js"></script>
+
+  <!-- Fallback for file:// protocol where ES modules are blocked by CORS -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // If modules loaded, js-ready class is already set — skip fallback
+      if (document.documentElement.classList.contains('js-ready')) return;
+
+      // Mark JS as ready for CSS hooks
+      document.documentElement.classList.add('js-ready');
+
+      // Set footer year
+      var yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+      // Reveal all .reveal elements (simple fallback — no scroll observer)
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('visible');
+      });
+
+      // ── Hobby side-panel ──
+      var overlay = document.getElementById('hobbyPanelOverlay');
+      var panel   = document.getElementById('hobbyPanel');
+      var closeBtn= document.getElementById('hobbyPanelClose');
+      var body    = document.getElementById('hobbyPanelBody');
+      if (!overlay || !panel || !closeBtn || !body) return;
+
+      var hobbyData = {
+        football: {
+          emoji: '⚽', title: 'Football',
+          content: '<p>Football has been a constant in my life since school days. Whether it\'s a casual 5-a-side with friends or watching the Premier League on weekends, the beautiful game never fails to excite me.</p><p>I usually play as a midfielder — I enjoy the blend of creativity and defensive responsibility.</p>',
+          extra: '<div class="hobby-panel-section"><h4>Photos</h4><div class="hobby-panel-photos"><div class="photo-placeholder">📷 Photo 1</div><div class="photo-placeholder">📷 Photo 2</div><div class="photo-placeholder">📷 Photo 3</div><div class="photo-placeholder">📷 Photo 4</div></div></div>'
+        },
+        music: {
+          emoji: '🎸', title: 'Music',
+          content: '<p>Music is my go-to for unwinding after a long coding session. I\'m an amateur guitarist who dabbles in acoustic fingerstyle.</p><p>My playlists swing between indie rock, lo-fi beats, and classic Bollywood melodies.</p>',
+          extra: '<div class="hobby-panel-section"><h4>Preview Links</h4><div class="hobby-panel-links"><a href="#"><i class="ph ph-spotify-logo"></i> Spotify Playlist</a><a href="#"><i class="ph ph-youtube-logo"></i> Guitar Covers</a><a href="#"><i class="ph ph-music-notes"></i> SoundCloud</a></div></div>'
+        },
+        writing: {
+          emoji: '✍️', title: 'Writing',
+          content: '<p>Writing helps me organize my thoughts and communicate complex ideas clearly. I maintain a personal blog where I write about technology and life.</p><p>I also enjoy journaling and occasionally write poetry.</p>',
+          extra: '<div class="hobby-panel-section"><h4>Preview Links</h4><div class="hobby-panel-links"><a href="#"><i class="ph ph-article"></i> Personal Blog</a><a href="#"><i class="ph ph-medium-logo"></i> Medium Articles</a><a href="#"><i class="ph ph-notebook"></i> Poetry Collection</a></div></div>'
+        }
+      };
+
+      function closePanel() {
+        overlay.classList.remove('active');
+        panel.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.fun-card[data-hobby]').forEach(function(card) {
+        card.addEventListener('click', function() {
+          var data = hobbyData[card.dataset.hobby];
+          if (!data) return;
+          body.innerHTML =
+            '<span class="panel-emoji" aria-hidden="true">' + data.emoji + '</span>' +
+            '<h3>' + data.title + '</h3>' +
+            data.content + (data.extra || '');
+          overlay.classList.add('active');
+          panel.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          closeBtn.focus();
+        });
+      });
+
+      closeBtn.addEventListener('click', closePanel);
+      overlay.addEventListener('click', closePanel);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePanel(); });
+    });
+  </script>
 </body>
 </html>
