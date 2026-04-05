@@ -2,7 +2,7 @@
    Fun / Extra Section — Hobby cards + modal
    ═══════════════════════════════════════════════════════════ */
 
-.fun { background: var(--bg-alt); }
+.fun { background: var(--bg); }
 
 .fun-grid {
   display: grid;

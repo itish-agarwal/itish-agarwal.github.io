@@ -2,7 +2,7 @@
    Contact Section — Form + info sidebar
    ═══════════════════════════════════════════════════════════ */
 
-.contact { background: var(--bg); }
+.contact { background: var(--bg-alt); }
 
 .contact-grid {
   display: grid;
