@@ -58,75 +58,139 @@
   opacity: 1;
 }
 
-/* ── Hobby Modal ── */
-.hobby-modal-overlay {
+/* ── Hobby Side Panel ── */
+.hobby-panel-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .45);
-  backdrop-filter: blur(6px);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s ease, visibility .3s ease;
 }
-.hobby-modal-overlay.active {
+.hobby-panel-overlay.active {
   opacity: 1;
   visibility: visible;
 }
 
-.hobby-modal {
+.hobby-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  max-width: 90vw;
+  height: 100vh;
   background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: var(--sp-8);
-  max-width: 520px;
-  width: 90%;
-  position: relative;
-  transform: translateY(30px) scale(.95);
-  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
-  box-shadow: 0 24px 60px rgba(0,0,0,.18);
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, .12);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
-.hobby-modal-overlay.active .hobby-modal {
-  transform: translateY(0) scale(1);
+.hobby-panel.active {
+  transform: translateX(0);
 }
 
-.hobby-modal-close {
+.hobby-panel-close {
   position: absolute;
-  top: var(--sp-3);
+  top: var(--sp-4);
   right: var(--sp-4);
-  background: none;
+  background: var(--purple-50);
   border: none;
-  font-size: 1.6rem;
-  color: var(--gray-500);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: var(--gray-600);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
-  transition: color var(--transition), transform var(--transition);
+  transition: color var(--transition), background var(--transition);
+  z-index: 1;
 }
-.hobby-modal-close:hover {
+.hobby-panel-close:hover {
   color: var(--accent);
-  transform: rotate(90deg);
+  background: var(--purple-100);
 }
 
-.hobby-modal-body .modal-emoji {
+.hobby-panel-body {
+  padding: var(--sp-8);
+  padding-top: var(--sp-10);
+  flex: 1;
+}
+
+.hobby-panel-body .panel-emoji {
   font-size: 2.8rem;
   display: block;
   margin-bottom: var(--sp-3);
 }
-.hobby-modal-body h3 {
+.hobby-panel-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--gray-800);
-  margin-bottom: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid var(--purple-100);
 }
-.hobby-modal-body p {
+.hobby-panel-body p {
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: var(--sp-3);
 }
-.hobby-modal-body p:last-child {
+.hobby-panel-body p:last-child {
   margin-bottom: 0;
+}
+
+/* Panel section for links / photos */
+.hobby-panel-section {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--gray-200);
+}
+.hobby-panel-section h4 {
+  font-family: var(--font-heading);
+  font-size: .95rem;
+  color: var(--gray-700);
+  margin-bottom: var(--sp-3);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.hobby-panel-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+.hobby-panel-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--accent);
+  font-size: .9rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.hobby-panel-links a:hover {
+  color: var(--purple-700);
+}
+.hobby-panel-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+}
+.hobby-panel-photos .photo-placeholder {
+  background: var(--purple-50);
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-300);
+  font-size: .8rem;
 }
 
 /* Tap game */

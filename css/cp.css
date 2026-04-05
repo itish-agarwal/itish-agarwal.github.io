@@ -99,3 +99,22 @@
   border-radius: 50px;
   margin-top: var(--sp-1);
 }
+
+.cp-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: var(--sp-3);
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition), gap var(--transition);
+}
+.cp-profile-link:hover {
+  color: var(--purple-700);
+  gap: .55rem;
+}
+.cp-profile-link i {
+  font-size: .95rem;
+}

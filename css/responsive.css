@@ -43,10 +43,10 @@
   .projects-grid { grid-template-columns: 1fr; }
   .fun-grid { grid-template-columns: 1fr; }
 
-  /* Hobby modal adjustments */
-  .hobby-modal {
-    padding: var(--sp-6);
-    width: 94%;
+  /* Hobby side panel — full width on mobile */
+  .hobby-panel {
+    width: 100vw;
+    max-width: 100vw;
   }
 }
 
